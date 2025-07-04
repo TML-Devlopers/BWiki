@@ -1,13 +1,10 @@
 /* Genel Ayarlar */
-body {
-    font-family: Product Sans;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #3
-    line-height: 1.6;
+@font-face {
+  font-family: 'Product Sans';
+  src: url('fonts/ProductSans-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-
 .container {
     width: 80%;
     max-width: 960px;
