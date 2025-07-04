@@ -248,6 +248,13 @@ body {
 body.dark a {
   color: #ff7675;
 }
+section {
+  background-color: #ffecec;
+  border-left: 5px solid #e74c3c;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
 
 
 }
