@@ -240,4 +240,14 @@ body {
   margin-left: 240px;
   padding: 30px;
 }
+  body.dark {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+body.dark a {
+  color: #ff7675;
+}
+
+
 }
