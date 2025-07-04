@@ -148,4 +148,58 @@ footer {
     font-size: 0.95rem;
     color: #666;
 }
+
+  body {
+  margin: 0;
+  font-family: 'MyFont', sans-serif;
+  display: flex;
+}
+
+/* Yan Panel */
+.sidebar {
+  width: 200px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 5px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #3498db;
+  transform: translateX(5px);
+}
+
+/* İçerik Alanı */
+.content {
+  margin-left: 220px;
+  padding: 30px;
+  flex: 1;
+}
+
+
 }
