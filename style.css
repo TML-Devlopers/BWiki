@@ -254,7 +254,25 @@ section {
   padding: 10px 15px;
   margin-bottom: 20px;
 }
+body.dark {
+  background-color: #1a1a1a;
+  color: #eee;
+}
 
+body.dark a {
+  color: #ff8c8c; /* koyu modda daha iyi görünür */
+}
+
+body a {
+  color: #3498db; /* varsayılan açık tema rengi */
+  text-decoration: none;
+}
+
+button#dark-toggle {
+  padding: 10px;
+  margin: 15px 0;
+  cursor: pointer;
+}
 
 
 }
