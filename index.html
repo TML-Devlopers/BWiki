@@ -3,58 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BWiki: Ana Sayfa</title>
-  <div class="sidebar">
-<h1 id="welcome">Şu anda eski web site arşivimizi görüntülüyorsunuz. Bu yüzden maddeler çalışmaz. Ve normal görünümde açılmaz.</h1>
-<div class="sidebar">
-  <h2>BWiki</h2>
-  <ul>
-    <li><a href="kedi.html">Kedi</a></li>
-    <li><a href="google.html">Google</a></li>
-    <li><a href="isletim-sistemi.html">İşletim Sistemi</a></li>
-  </ul>
-</div>
-      <body>
-  <div class="sidebar">
-    <!-- Menüler buraya -->
-  </div>
+    <title>Site Mevcut Değil</title>
+    <!-- Tailwind CSS'i dahil ediyoruz -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Inter fontunu Google Fonts'tan yüklüyoruz */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-  <div class="content">
-    <!-- Asıl içerik buraya -->
-    <h1>Şu anda eski web site arşivimizi görüntülüyorsunuz. Bu yüzden maddeler çalışmaz. Ve normal görünümde açılmaz.</h1>
-    <p>BWiki evrenine giriş yaptın 🐾</p>
-  </div>
-</body>
+        body {
+            font-family: 'Inter', sans-serif; /* Inter fontunu varsayılan olarak ayarlıyoruz */
+            background-color: #1a1a2e; /* Koyu morumsu arka plan */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Sayfanın tamamını kaplamasını sağlıyoruz */
+            margin: 0;
+            overflow: hidden; /* Taşmayı engelliyoruz */
+        }
+
+        .neon-container {
+            text-align: center;
+            background: #2a004a; /* Koyu mor tonu */
+            padding: 4rem 3rem; /* İç boşluk */
+            border-radius: 20px; /* Yuvarlak köşeler */
+            box-shadow: 0 0 30px rgba(170, 0, 255, 0.5), /* Mor neon gölge */
+                        0 0 60px rgba(170, 0, 255, 0.3),
+                        0 0 90px rgba(170, 0, 255, 0.1);
+            position: relative;
+            z-index: 10;
+            max-width: 90%; /* Küçük ekranlarda taşmayı engellemek için */
+        }
+
+        /* Logo için stil */
+        .logo {
+            width: 96px; /* 24 Tailwind birimi = 96px */
+            height: 96px; /* 24 Tailwind birimi = 96px */
+            border-radius: 50%; /* Tamamen yuvarlak */
+            margin-bottom: 24px; /* Alt boşluk */
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), /* Açık mavi neon gölge */
+                        0 0 40px rgba(0, 255, 255, 0.4);
+            display: block; /* Ortalamak için */
+            margin-left: auto; /* Ortalamak için */
+            margin-right: auto; /* Ortalamak için */
+            object-fit: cover; /* Resmin kutuya sığmasını sağlar */
+        }
 
 
+        .neon-text {
+            color: #fff; /* Beyaz metin */
+            font-size: 3.5rem; /* Büyük yazı boyutu */
+            font-weight: 700; /* Kalın yazı */
+            text-shadow: 0 0 10px #00f, /* Mavi neon gölge */
+                         0 0 20px #00f,
+                         0 0 30px #00f,
+                         0 0 40px #00f,
+                         0 0 50px #00f;
+            animation: flicker 1.5s infinite alternate; /* Titreme animasyonu */
+            margin-bottom: 1.5rem; /* Alt boşluk */
+            line-height: 1.2; /* Satır yüksekliği */
+        }
 
-<div class="content">
-  <!-- İçerik buraya -->
-</div>
-        
+        .sub-text {
+            color: #a0a0a0; /* Gri tonu */
+            font-size: 1.2rem; /* Daha küçük yazı boyutu */
+            margin-bottom: 2rem; /* Alt boşluk */
+        }
 
-<h2>Maddeler</h2>
-        <div class="topic-grid">
-            <div class="topic-card">
-                <h3><a href="kedi.html">Kediler</a></h3>
-                <p>Kediler hakkında genel bilgiler ve cinsleri.</p>
-            </div>
-            <div class="topic-card">
-                <h3><a href="google.html">Google</a></h3>
-                <p>Google'ın tarihi ve sunduğu hizmetler.</p>
-            </div>
-            <div class="topic-card">
-                <h3><a href="isletim-sistemi.html">İşletim Sistemleri</a></h3>
-                <p>İşletim sistemlerinin temelleri ve çeşitleri.</p>
-            </div>
-            </div>
-    </main>
+        /* Responsive tasarım için medya sorguları */
+        @media (max-width: 768px) {
+            .neon-text {
+                font-size: 2.5rem; /* Küçük ekranlarda yazı boyutunu küçült */
+            }
+            .sub-text {
+                font-size: 1rem;
+            }
+            .neon-container {
+                padding: 3rem 1.5rem;
+            }
+            .logo {
+                width: 72px; /* Küçük ekranlarda logoyu küçült */
+                height: 72px;
+                margin-bottom: 16px;
+            }
+        }
 
-    <footer>
-        <p>&copy; 2025 Beta lnc. Tüm Hakları Saklıdır.</p>
-    
-    </footer>
+        @media (max-width: 480px) {
+            .neon-text {
+                font-size: 1.8rem;
+            }
+            .sub-text {
+                font-size: 0.9rem;
+            }
+            .neon-container {
+                padding: 2rem 1rem;
+            }
+            .logo {
+                width: 60px; /* Daha küçük ekranlarda logoyu daha da küçült */
+                height: 60px;
+                margin-bottom: 12px;
+            }
+        }
 
-    <script src="script.js"></script>
+        /* Neon titreme animasyonu */
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow:
+                    0 0 10px #00f,
+                    0 0 20px #00f,
+                    0 0 30px #00f,
+                    0 0 40px #00f,
+                    0 0 50px #00f;
+                color: #fff;
+            }
+            20%, 24%, 55% {
+                text-shadow: none;
+                color: #b0b0b0; /* Hafif gri tonu */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="neon-container">
+        <!-- Logo buraya eklendi -->
+        <img src="resimler/bwiki_logo.png" alt="Site Logosu" class="logo">
+        <h1 class="neon-text">BU SİTE ARTIK MEVCUT DEĞİL</h1>
+        <p class="sub-text">Malesef BWiki 10 Temmuz 2025`te kapandı.</p>
+        <!-- Ana Sayfaya Dön butonu kaldırıldı -->
+    </div>
 </body>
 </html>
